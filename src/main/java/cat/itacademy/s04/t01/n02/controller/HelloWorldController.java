@@ -11,7 +11,7 @@ public class HelloWorldController {
 //    @RequestMapping (value="/HelloWorld", method= RequestMethod.GET)
     @GetMapping("/HelloWorld")
     public String greet(@RequestParam(defaultValue = "UNKNOWN") String name) {
-        return "Hello, " + name + ". You are running a Maven project.";
+        return "Hello, " + name + ". You are running a Gradle project.";
     }
 
 //    @RequestMapping (value={"/HelloWorld2", "/HelloWorld2/{name}"}, method= RequestMethod.GET)
@@ -20,7 +20,7 @@ public class HelloWorldController {
             "/HelloWorld2"})
     public String greet2(@PathVariable(required = false) String name) {
         if (name==null) {name = "UNKNOWN";}
-        return "Hello, " + name + ". You are running a Maven project.";
+        return "Hello, " + name + ". You are running a Gradle project.";
     }
 
 }
